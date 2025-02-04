@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #070505;
+    color: #f9fcfc;
+    font-family: Arial, sans-serif;
+}
+.card {
+    background: #070505;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px  rgba(206, 205, 205, 0.2);
+    text-align: center;
+    max-width: 350px;
+}
+h2 {
+    font-family: "Sofia", sans-serif;
+    font-size: 2rem;
+}
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.social-links a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #0073b1;
+}
+@media (max-width: 400px) {
+    body {
+        padding: 20px;
+    }
+    .card {
+        max-width: 300px;
+        padding: 15px;
+    }
+    .email {
+        font-size: 0.9rem;
+    }
+}
