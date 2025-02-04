@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     display: flex;
     justify-content: center;
@@ -5,40 +6,110 @@ body {
     height: 100vh;
     background-color: #070505;
     color: #f9fcfc;
-    font-family: Arial, sans-serif;
-}
-.card {
-    background: #070505;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 2px  rgba(206, 205, 205, 0.2);
-    text-align: center;
-    max-width: 350px;
 }
+
+/* Card Container */
+.card {
+    background: #0a0a0a;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    max-width: 380px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Profile Image */
+.card img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f9fcfc;
+}
+
+/* Name */
 h2 {
     font-family: "Sofia", sans-serif;
     font-size: 2rem;
+    margin: 10px 0 5px;
+    text-shadow: 2px 2px 2px #8b8080;
 }
-.card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+
+/* Job Title */
+h4 {
+    font-size: 1.2rem;
+    color: #FFD700; /* Golden Yellow */
+    font-weight: bold;
+    margin-bottom: 10px;
 }
+
+/* Text Sections */
+.card p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #d3d6db; /* Light Gray */
+}
+
+/* Email Styling */
+.email {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #FFD700;
+    word-break: break-word;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 15px;
+}
+
 .social-links a {
-    margin: 0 5px;
-    text-decoration: none;
-    color: #0073b1;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #FFD700;
+    transition: color 0.3s, transform 0.2s;
 }
-@media (max-width: 400px) {
-    body {
+
+.social-links a:hover {
+    color: #28A745; /* Emerald Green */
+    transform: scale(1.2);
+}
+
+/* UTC Time */
+#utc-time {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #f9fcfc;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 450px) {
+    .card {
+        max-width: 90%;
         padding: 20px;
     }
-    .card {
-        max-width: 300px;
-        padding: 15px;
+
+    h2 {
+        font-size: 1.8rem;
     }
-    .email {
-        font-size: 0.9rem;
+
+    .card img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .social-links a {
+        font-size: 1.3rem;
     }
 }
